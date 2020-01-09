@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Robotique Jules-Verne</title>
+    <link rel="shortcut icon" href="logo.ico">
+		<link rel="icon" type="image/x-icon" href="logo.ico" sizes="192x192">
+		<link rel="apple-touch-icon" sizes="180x180" href="logo-180x180.ico">
+		<link href="web19-20.css" type= "text/css"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <script type="text/javascript" src="web19-20.js"></script>
+    <script type="text/javascript">
+    window.onload = function() {
+      if (navigator.language == 'fr'||navigator.language == 'fr-FR') {
+        frenchFry();
+      }
+      if (navigator.language == 'en'||navigator.language == 'en-US') {
+        anglicisme();
+      }
+    };
+    function anglicisme(){
+      document.getElementById("text").innerHTML = text.JVEnglish;
+      document.getElementById("logoText").innerHTML = "Jules-Verne Robotics";
+      document.getElementById("enFrancais").style.display = "block";
+      document.getElementById("toEnglish").style.display = "none";
+    }
+    function frenchFry(){
+      document.getElementById("text").innerHTML = text.JVFrench;
+      document.getElementById("logoText").innerHTML = "Robotique Jules-Verne";
+      document.getElementById("toEnglish").style.display = "block";
+      document.getElementById("enFrancais").style.display = "none";
+    }
+    </script>
+  </head>
+  <body>
+    <div class="topBit">
+      <a href="https://www.instagram.com/clubrobotique/">  <img src="logo.png" id="logo"></a>
+      <p id="logoText"></p>
+      <button id="toEnglish" onclick="anglicisme()"><img src="engFlag.png" id="enFlag"></img></button>
+      <button id="enFrancais" onclick="frenchFry()"><img src="freFlag.png" id="frFlag"></button>
+    </div>
+    <div class="left" onclick="plusDivs(-1)">&#10095;</div>
+    <div class="right" onclick="plusDivs(+1)">&#10095;</div>
+    <div class="pages" id="p1">
+      <img src="adexample.jpg" alt="" id="ad3">
+      <p id="textP1">page 1</p>
+    </div>
+    <div class="pages" id="p2">
+      <img src="adexample.jpg" alt="" id="ad1">
+      <p id="textP2">page 2</p>
+    </div>
+    <div class="pages" id="p4">
+      <img src="adexample.jpg" alt="" id="ad2">
+      <p id="textP3">page 3</p>
+    </div>
+     </body>
+   </html>
+  </body>
+</html>

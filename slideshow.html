@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {
+  font-family: Consolas, monospace;
+  margin:0;
+}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+/* .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+} */
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+/* .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+} */
+
+/* @-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+} */
+/*
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+} */
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+<img src="logo.png" alt="">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+    <p style="width:100%" style="height:40%">
+      Cher Espion,
+      </br>
+      </br>
+      Votre mission, si vous choisissez de l’accepter, est de participer à la compétition de CRC.
+      </br>
+      Voici certains documents qui vous donnera de l’information nécessaire pour cette mission:
+
+    </p>
+  </div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+    <h1>
+      JULES-VERNE
+    </h1>
+    <p style="width:100%" style="height:40%">
+    <b>Classification:</b> École Secondaire </br>
+    <b> Location:</b> Vancouver, BC, CANADA // 49°14'11.616", -123°7'20.136" </br>
+    <b>  Fondé:</b> Septembre 2009</br>
+    <b>  Histoire:</b> Originalement cette école était le programme francophone de l’école anglophone Kitsilano Secondary School. Bien que ce fut connu comme un programme francophone, plusieurs des cours de 11e et 12e étaient offert en anglais.
+      Donc, les parents et le personnel décidèrent que ce fut nécessaire que les étudiants francophones de pouvoir avoir une école vraiment francophone et construirent l’école secondaire Jules Verne.</br>
+    <b>  Faiblesses:</b> Ça fait rire les oiseaux; Sur ma route Black M</br>
+    <b>  Forces:</b> la barbe de M. Surprenant
+
+    </p>
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="topsecret.png" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>

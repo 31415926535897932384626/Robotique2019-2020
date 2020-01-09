@@ -1,0 +1,106 @@
+
+button {
+  float: right;
+  top: 40px;
+  padding: 30px;
+}
+h1{
+  position: fixed;
+  top: 10%;
+  left: 40%;
+  font-family: 'Montserrat';
+  color: black;
+}
+body{
+  background-color: rgb(250,250,250);
+}
+a:visited {
+  color: rgb(131,94,232);
+}
+p, #text{
+  color:  black;
+  font-size: 20px;
+}
+.image {
+  display:none;
+  width: 35%;
+  position: fixed;
+  left: 32.5%;
+  top: 25%;
+}
+.pages{
+  display: none;
+}
+#enFlag, #frFlag{
+    width: 100%;
+    position: absolute;
+    top:40%;
+}
+#logo{
+  position:fixed;
+  width: 5%;
+  top: 1%;
+}
+#logoText{
+  position:fixed;
+  top: 3.5%;
+  left: 6%;
+  font-family: 'Montserrat';
+  font-size: 12px;
+}
+#enFrancais{
+  display: none;
+}
+#toEnglish{
+  display: block;
+}
+#toEnglish, #enFrancais{
+  position: fixed;
+  right: 1%;
+  top: 2%;
+  width: 5%;
+  background-color: rgb(22,22,22);
+  border-color: rgb(22,22,22);
+}
+#ad{
+  float:left;
+  padding: 20px;
+  width:20%;
+}
+#text{
+  text-align: center;
+  float:left;
+  font-family: 'Montserrat';
+  padding: 20px;
+  width: 50%;
+}
+#crcImage{
+  position: absolute;
+  width: 35%;
+  margin-left: 31%;
+  margin-bottom: 5%;
+}
+#JVImage{
+  width:40%;
+  position: fixed;
+  top:7%;
+  left:30%;
+}
+#docImage{
+  width: 17%;
+  position: fixed;
+  left: 40%;
+  top: 5%
+}
+#flipImage{
+  position: absolute;
+  top: 15%;
+  width: 35%;
+  left: 32%;
+}
+#stl{
+  position: fixed;
+  top:10%;
+  width: 20%;
+  left: 50%;
+}
